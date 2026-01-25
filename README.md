@@ -4,7 +4,7 @@ A native **NVIDIA** GPU monitoring widget for [DankMaterialShell](https://github
 
 This plugin provides a real-time, animated dashboard for your NVIDIA graphics card, ported from the excellent [AMD GPU Monitor](https://github.com/navidagz/dms-amd-gpu-monitor) by navidagz.
 
-![Screenshot](screenshot.png)
+![Screenshot](Screenshot.png)
 
 ## Requirements
 
