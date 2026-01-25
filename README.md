@@ -6,51 +6,49 @@ This plugin provides a real-time, animated dashboard for your NVIDIA graphics ca
 
 ![Screenshot](screenshot.png)
 
-
 ## Requirements
 
-1.  **DankMaterialShell** 
-2.  **NVIDIA Drivers**
-3.  **nvidia-smi** 
+* **DankMaterialShell**
+* **NVIDIA Drivers**
+* **nvidia-smi**
 
 \`\`\`bash
-# Arch Linux check
-sudo pacman -S nvidia-utils
-nvidia-smi  
+# Check if you have the tool installed:
+nvidia-smi
 \`\`\`
 
 ## Installation
 
-###1: Clone the repo to plugins directory
+###1:
 
-1.  Navigate to your DMS plugins directory:
-    \`\`\`bash
-    cd ~/.config/DankMaterialShell/plugins
-    \`\`\`
+1. Navigate to your DMS plugins directory:
+   \`\`\`bash
+   cd ~/.config/DankMaterialShell/plugins
+   \`\`\`
 
-2.  Clone this repository:
-    \`\`\`bash
-    git clone https://github.com/TEJASJONDHALE/dms-nvidia-gpu-monitor.git nvidia-gpu-monitor
-    \`\`\`
+2. Clone this repository:
+   \`\`\`bash
+   git clone [https://github.com/TEJASJONDHALE/dms-nvidia-gpu-monitor.git](https://github.com/TEJASJONDHALE/dms-nvidia-gpu-monitor.git) nvidia-gpu-monitor
+   \`\`\`
 
-3.  Restart DankMaterialShell:
-    \`\`\`bash
-    dms restart
-    \`\`\`
+3. Restart DankMaterialShell:
+   \`\`\`bash
+   dms restart
+   \`\`\`
 
 ###2: Enable in Settings
 
-1.  Open **Dank Settings** (\`Super\` + \`Comma\`).
-2.  Go to **Plugins** → Click **Scan**.
-3.  Find **"NVIDIA GPU Monitor"** in the list and toggle it **ON**.
+1. Open **Dank Settings** (\`Super\` + \`,\`).
+2. Go to **Plugins** → Click **Scan**.
+3. Find **"NVIDIA GPU Monitor"** in the list and toggle it **ON**.
 
 ## Configuration
 
-To add the widget to your bar, edit your \`settings.json\`:
+To add the widget to your bar, edit your settings file:
 
 **File:** \`~/.config/DankMaterialShell/settings.json\`
 
-Add \`"nvidiaGpuMonitor"\` to your \`rightWidgets\` (or center/left) list:
+Add \`"nvidiaGpuMonitor"\` to your \`rightWidgets\` list:
 
 \`\`\`json
 "rightWidgets": [
@@ -74,19 +72,20 @@ Add \`"nvidiaGpuMonitor"\` to your \`rightWidgets\` (or center/left) list:
 
 ## Troubleshooting
 
-### Widget shows "0%" or "--"
+**Widget shows "0%" or "--"**
 * Ensure \`nvidia-smi\` works in your terminal.
-* Check if you have multiple GPUs. The plugin currently grabs the *first* NVIDIA GPU found.
+* The plugin currently grabs the *first* NVIDIA GPU found.
 
-### "Plugin not found" in settings
-* Ensure the folder name matches the ID expectation or that you have clicked **Scan** in the plugins menu.
-* Verify permissions: \`sudo chown -R \$USER:\$USER ~/.config/DankMaterialShell/plugins/\`
+**"Plugin not found" in settings**
+* Ensure the folder name is \`nvidia-gpu-monitor\`.
+* Click **Scan** in the plugins menu.
+* Verify permissions:
+  \`\`\`bash
+  sudo chown -R \$USER:\$USER ~/.config/DankMaterialShell/plugins/
+  \`\`\`
 
 ## Credits
 
-* [navidagz/dms-amd-gpu-monitor](https://github.com/navidagz/dms-amd-gpu-monitor) 
+* **Original Code:** [navidagz/dms-amd-gpu-monitor](https://github.com/navidagz/dms-amd-gpu-monitor)
 
-## License
 
-MIT
-EOF
